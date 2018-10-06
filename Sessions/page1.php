@@ -35,6 +35,7 @@ if(isset($_POST['submit'])){
                 <input type="text"name="email" class="form-control" value="<?php echo isset($_POST['email']) ? $email : ''; ?>">
             </div>
             <br>
+            <!-- This exact submit method works with sessions buttons are not as lucky-->
             <input type="submit" name="submit" class="btn btn-primary" value="Submit">
         </form>
 </body>

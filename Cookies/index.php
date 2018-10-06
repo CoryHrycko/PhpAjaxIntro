@@ -1,9 +1,11 @@
 <?php
+    //checking the post request
     if(isset($_POST['submit'])){
+        //making sure the security of the server is perserved with htmlentities
         $username=htmlentities($_POST['username']);
-
+        // setting cookies and timer
         setcookie('username', $username,time()+3600);
-
+        // header directional function. to allow the submit to move to another page with the response
         header('Location: page2.php');
     }
 ?>

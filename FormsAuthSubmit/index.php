@@ -81,6 +81,7 @@ if(filter_has_var(INPUT_POST,'submit')){
         <form method='post' action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <div class="form-group">
                 <label>Name</label>
+                <!-- this form has the wonderful action of keeping the text in the fields-->
                 <input type="text" name="name" class="form-control" value="<?php echo isset($_POST['name']) ? $name : ''; ?>">
             </div>
             <div class="form-group">

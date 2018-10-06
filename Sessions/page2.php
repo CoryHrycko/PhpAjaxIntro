@@ -1,4 +1,5 @@
 <?php
+//session start is a must for this technique
     session_start();
 //can update session at anytime on any page
     $name =$_SESSION['name'];
@@ -14,6 +15,7 @@
     <title>Document</title>
 </head>
 <body>
+<!-- This is showing how you can personalize-->
     <h5>Thank you <?php echo $name; ?> for all the fish from <?php echo $email; ?></h5>
     <a href="page3.php"> go to page 3</a>
 </body>

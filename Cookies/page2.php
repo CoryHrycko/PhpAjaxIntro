@@ -6,6 +6,7 @@
     //setcookie('username', 'Frank',time()-3600);
     
     if(count($_COOKIE)>0){
+        //counting cookies
         echo "there are ".count($_COOKIE).' cookie saved';
     }else{
         echo 'there are no cookies saved';

@@ -5,7 +5,7 @@
 
     //$name = isset($_SESSION['name']) ? $_SESSION['name']
     //: 'Guest';
-
+//session destroy is for log out. 
 session_destroy()
 
 ?>
