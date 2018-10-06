@@ -13,14 +13,19 @@
        if(str.legth ==0){
            //to start the function with a default
            document.getElementById('output').innerhtml = '';
+       //allowing the string function to work
        }else{
+           //declaring the variable
            var xmlhttp = new XMLHttpRequest();
+           //detecting state changes and authenticates if the websites are functional
            xmlhttp.onreadystatechange=function(){
                if(this.readyState == 4 && this.status == 200){
                    document.getElementById('output').innerHTML = this.responseText;
                }
            }
+           //writes the get function
            xmlhttp.open("GET", "suggest.php?q="+str,true);
+           //initiates the request
            xmlhttp.send();
        }
     }
@@ -32,7 +37,7 @@
 <div class="container">
     <h1>Search Users</h1>
         <form>
-        Search User: <input type="text" class="form-control" onkeyup="showSuggestion(this.value)">
+        Search User: <input type="text" class="form-control primary" onkeyup="showSuggestion(this.value)">
         </form>
     <p>Suggestions:<span id="output" style="font-weight:bold"></span></p>
 </div>

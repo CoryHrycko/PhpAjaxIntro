@@ -61,7 +61,9 @@ $suggestion= "";
 //Get suggestion
 
 if($q !==""){
+    //switches all to lowercase
     $q =strtolower($q);
+    //grabs a the length so the loop has something to run on
     $len = strlen($q);
     foreach($people as $person){
         if(stristr($q, substr($person,0, $len))){
@@ -74,5 +76,5 @@ if($q !==""){
         }
     }
 }
-
+//turnerary for if/else statement
 echo $suggestion ===""?"No Suggestion" : $suggestion;
