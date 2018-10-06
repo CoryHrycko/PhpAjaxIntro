@@ -7,7 +7,7 @@
     <title>Document</title>
     <!-- a stylesheet from booswatch-->
     <link rel="stylesheet" href="https://bootswatch.com/4/cyborg/bootstrap.min.css">
-<script>
+<script> 
 // The Function to initialize suggestions
     function showSuggestion(str){
        // console.log(str)

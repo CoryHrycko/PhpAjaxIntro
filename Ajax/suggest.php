@@ -52,7 +52,7 @@ $people[] = 'Jessi Widmer';
 $people[] = 'Rocio Bumgarner';
 $people[] = 'Cornelius Rehm';
 
-//get Query Strin
+//get Query String
 
 $q =$_REQUEST['q'];
 
