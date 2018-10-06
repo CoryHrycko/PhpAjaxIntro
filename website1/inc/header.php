@@ -1,3 +1,6 @@
+<?php
+//very Easy header for all the website on a specific page. great stuff
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
