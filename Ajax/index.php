@@ -7,9 +7,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://bootswatch.com/4/cyborg/bootstrap.min.css">
 <script>
+// The Function to initialize suggestions
     function showSuggestion(str){
        // console.log(str)
        if(str.legth ==0){
+           //to start the function with a default
            document.getElementById('output').innerhtml = '';
        }else{
            var xmlhttp = new XMLHttpRequest();
