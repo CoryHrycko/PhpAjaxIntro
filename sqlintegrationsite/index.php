@@ -1,4 +1,6 @@
 <?php
+    //defining root and other configs
+    require('config/config.php');
     //required log in for the server
     require('config/db.php');
     //sql query 
@@ -41,7 +43,7 @@ mysqli_close($conn);
             <?php echo $post['author'] ?>
             </small>
             <p><?php echo $post['body'] ?></p>
-            <a class="btn btn-default" href="post.php?id=<?php echo $post['id'];?> ">Read more</a>
+            <a class="btn btn-default" href=" post.php?id=<?php echo $post['id'];?> ">Read more</a>
         </div>
     <?php endforeach; ?>
 </div>

@@ -1,4 +1,6 @@
 <?php
+    //defining root and other configs
+    require('config/config.php');
     //required log in for the server
     require('config/db.php');
     //get id
@@ -36,7 +38,7 @@ mysqli_close($conn);
 </head>
 <body>
     <div class="container">
-    <a href="/" class="btn btn-default">Back</a>>
+    <a href="<?php echo ROOT_URL; ?>" class="btn btn-default">Back</a>>
     <h1><?php echo $post['title']; ?></h1>
         <small>Created on <?php echo $post['created_at'] ?> by
         <?php echo $post['author'] ?>
