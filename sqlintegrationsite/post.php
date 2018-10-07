@@ -36,6 +36,7 @@ mysqli_close($conn);
 </head>
 <body>
     <div class="container">
+    <a href="/" class="btn btn-default">Back</a>>
     <h1><?php echo $post['title']; ?></h1>
         <small>Created on <?php echo $post['created_at'] ?> by
         <?php echo $post['author'] ?>
