@@ -27,16 +27,9 @@
 mysqli_close($conn);
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Php Blog</title>
-    <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
-</head>
-<body>
+<?php include('inc/header.php');?>
+
+
     <div class="container">
     <a href="<?php echo ROOT_URL; ?>" class="btn btn-default">Back</a>>
     <h1><?php echo $post['title']; ?></h1>
@@ -45,8 +38,8 @@ mysqli_close($conn);
         </small>
         <p><?php echo $post['body'] ?></p>
 </div>
-</body>
-</html>
+
+<?php include('inc/footer.php'); ?>
 
 
 

@@ -24,16 +24,7 @@
 mysqli_close($conn);
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Php Blog</title>
-    <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
-</head>
-<body>
+<?php include('inc/header.php');?>
     <div class="container">
     <h1>Posts</h1>
     <?php foreach($posts as $post) : ?>
@@ -47,9 +38,7 @@ mysqli_close($conn);
         </div>
     <?php endforeach; ?>
 </div>
-</body>
-</html>
-
+<?php include('inc/footer.php'); ?>
 
 
 
