@@ -4,7 +4,7 @@
     //required log in for the server
     require('config/db.php');
     //sql query 
-    $query = 'SELECT * FROM posts';
+    $query = 'SELECT * FROM posts ORDER BY created_at DESC';
 
     //get result
 
@@ -28,7 +28,7 @@ mysqli_close($conn);
     <div class="container">
     <h1>Posts</h1>
     <?php foreach($posts as $post) : ?>
-        <div class="well">
+        <div class="well bg-secondary">
             <h3><?php echo $post['title']; ?></h3>
             <small>Created on <?php echo $post['created_at'] ?> by
             <?php echo $post['author'] ?>

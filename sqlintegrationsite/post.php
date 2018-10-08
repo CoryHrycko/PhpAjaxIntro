@@ -38,7 +38,7 @@ mysqli_close($conn);
         </small>
         <p><?php echo $post['body'] ?></p>
 </div>
-
+<a href="<?php echo ROOT_URL;?>editpost.php?id=<?php echo $post['id'];?>" class="btn btn-default">Edit</a>
 <?php include('inc/footer.php'); ?>
 
 

@@ -20,8 +20,8 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="<?php echo ROOT_URL; ?>addpost.php">Add Post</a>
               <a class="dropdown-item" href="#">Subscribe</a>
-              <a class="dropdown-item" href="#">Band Website</a>
               <a class="dropdown-item" href="#">Ecomerce Example</a>
             </div>
           </li>

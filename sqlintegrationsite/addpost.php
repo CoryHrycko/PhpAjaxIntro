@@ -3,13 +3,31 @@
     require('config/config.php');
     //required log in for the server
     require('config/db.php');
+    //check for submit
+    if(isset($_POST['submit'])){
+        //Get form data
+        $title = mysqli_real_escape_string($conn, $_POST['title']);
+        $body = mysqli_real_escape_string($conn, $_POST['body']);
+        $author = mysqli_real_escape_string($conn, $_POST['author']);
 
+        $query = "INSERT INTO posts(title, author, body) VALUES('$title','$author','$body')";
+
+        if(mysqli_query($conn, $query)){
+            header('Location: '.ROOT_URL.'');
+        }else{
+            echo "ERROR: ".mysqli_error($conn);
+        }
+
+
+
+
+    }
 ?>
 
 <?php include('inc/header.php');?>
     <div class="container">
     <h1> Add Posts</h1>
-    <form method="POST"action="<?php $_SERVER['PHP_SELF';?>">
+    <form method="POST"action="<?php $_SERVER['PHP_SELF'];?>">
         <div class="form-group">
             <label>Title</label>
             <input type="text" name="title" class="form-control">
@@ -20,10 +38,11 @@
         </div>
         <div class="form-group">
             <label>Body</label>
-            <input type="text" name="body" class="form-control">
+            <textarea type="text" name="body" class="form-control"></textarea>
         </div>
-    
+        <input type="submit" name="submit" value="Submit" class="btn btn-primary">
     </form>
+    <hr>
 </div>
 <?php include('inc/footer.php'); ?>
 
